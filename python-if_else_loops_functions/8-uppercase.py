@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 
 
-def uppercase(text):
-    charsBag = str(text)
-    res = ""
-    for c in charsBag:
-        if ord(c) >= ord('a') and ord(c) <= ord('z'):
-            translation = ord(c) - ord('a')
-            res += chr(ord('A') + translation)
+def uppercase(str):
+    result = ""
+    for char in str:
+        # Check if character is lowercase (ASCII values 97-122)
+        if ord('a') <= ord(char) <= ord('z'):
+            # Convert to uppercase by subtracting 32 from ASCII value
+            result += chr(ord(char) - 32)
         else:
-            res += c
-    print("{}".format(res))
-    
+            result += char
+    print("{}".format(result))
