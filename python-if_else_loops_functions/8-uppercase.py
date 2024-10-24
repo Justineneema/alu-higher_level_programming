@@ -11,3 +11,4 @@ def uppercase(text):
         else:
             res += c
     print("{}".format(res))
+    
