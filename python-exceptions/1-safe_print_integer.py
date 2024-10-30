@@ -7,3 +7,5 @@ def safe_print_integer(value):
         return True
     except Exception as e:
         return False
+    finally:
+        return count
