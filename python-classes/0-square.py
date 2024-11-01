@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-# we are creating an wmpty class
+"""class that define a square."""
 class Square:
     pass
