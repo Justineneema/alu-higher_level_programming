@@ -1,12 +1,17 @@
 #!/usr/bin/python3
+"""
+an empty Square class
+"""
+
+
 class Square:
- size = int
- def __init__(self, size=0):
-   self.size = size
-   raise TypeError
-   except Exception as e:
-   print("size must be an integer")
-   raise ValueError
-   if size =< "0":
-    except ValueError:
-print("size must be >= 0")
+    """
+    Square class
+    """
+    def __init__(self,size=0):
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        if size < 0 :
+            raize ValueError("size must be >=  0")
+            self.__size = size
+  
