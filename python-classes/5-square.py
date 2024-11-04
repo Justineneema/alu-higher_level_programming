@@ -1,4 +1,3 @@
-#!/usr/bin/python
 #!/usr/bin/python3
 """
 an empty Square class
@@ -30,5 +29,6 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+
     def my_print(self):
-        print(*("# * self.__size for _ in range(self.__size)), sep="\n))
+        print(*("#" * self.__size for _ in range(self.__size)), sep="\n")
