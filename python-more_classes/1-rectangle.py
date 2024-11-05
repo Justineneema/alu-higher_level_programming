@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
 Module that defines a rectangle
- """
-
+"""
 
 class Rectangle:
     """
-    class to define a rectangle
+    Class to define a rectangle
     """
+
     def __init__(self, width=0, height=0):
-       self.width = width
-       self.height = height
+        self.width = width  # Calls the setter
+        self.height = height  # Calls the setter
 
     @property
     def width(self):
@@ -19,6 +19,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """Setter for width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -31,9 +32,10 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, value, height=0):
+    def height(self, value):
+        """Setter for height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value    
+        self.__height = value
