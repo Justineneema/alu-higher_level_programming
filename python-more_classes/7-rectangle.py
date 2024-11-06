@@ -96,7 +96,7 @@ class Rectangle:
     def __repr__(self):
         """
         returns the string representation of the Rectangle
-    
+
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
