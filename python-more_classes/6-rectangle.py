@@ -98,10 +98,5 @@ class Rectangle:
         print message when an instanve of Rectangle is deleted
         """
         print("Bye rectangle...")
-
-    @classmethod
-    def get_instance_count(cls):
-        """
-        the class method of accesing instance 
-        """
-        return cls.get_instance_count
+        type(self).number_of_instance -= 1
+    
