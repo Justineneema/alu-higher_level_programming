@@ -86,10 +86,9 @@ class Rectangle:
         prints the string representation of the Rectangle
         """
         print(str(self))
-    
-    def __eval(repr(self)):
+
+    def __repr__(self):
         """
         return a sting representation
         """
-        if self.__width == o or self.__height == 0
-             return eval()
+        return "Rectangle({}, {})".format(self.__width, self.__height)
