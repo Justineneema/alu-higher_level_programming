@@ -92,6 +92,7 @@ class Rectangle:
         return a sting representation
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
     def __del__(self):
         """
         print message when an instanve of Rectangle is deleted
