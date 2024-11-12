@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """
-a script that adds all arguments to a Python list,
-and then save them to a file.
+In this script, all the protocol options are directly contained in one list following all the other command line options. 
+JSON file named add_item.json which will only contain the query part of URL. Of course, if such file does not exist, it will be created at the phase of executing the application. 
+
+It is as simple as only containing the utility methods `save_to_json_file` and `load_from_json_file`. 
+nodes are for the purpose of reading and writing in the JSON file.
 """
 
 import sys
