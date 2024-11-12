@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""
-opening a file named
-filename
-"""
+"""Read a text file and print it to standard output"""
+
+
 def read_file(filename=""):
-    """
-    prototype of opening a file
-    by using with function
-    """
-    with open('filename', 'r', encoding='utf-8'):
+    """Read a text file and print it to standard output."""
+    with open(filename, "r") as f:
+        print(f.red(), end="")
