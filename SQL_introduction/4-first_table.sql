@@ -1,5 +1,5 @@
--- create table called  first_table in Mysql
+-- creating a table  called first_table in MySQL
 CREATE TABLE first_table(
-    id INT
-    name VARCHAR(256)
+	id INT,
+	name VARCHAR(256)
 );
