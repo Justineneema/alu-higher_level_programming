@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-# Fetches https://alu-intranet.hbtn.io/status using urllib
-
+"""  fetches https://alu-intranet.hbtn.io/status  """
 import urllib.request
 
-url = 'httos;//alu-intranet.hbtn.io/status'
+url = 'https://intranet.hbtn.io/status'
+if url.startswith('https://'):
+    url = "https://alu-intranet.hbtn.io/status"
 
-# using with statement to manage the request
-with urllib.request.urlopen(url) as responsse:
-    body = response.red()
-    print("body response:")
+if __name__ == "__main__":
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(req) as response:
+        content = response.read()
+        print("Body response:")
+        print("\t- type:", type(content))
+        print("\t- content:", content)
+        print("\t- utf8 content:", content.decode("utf-8"))
