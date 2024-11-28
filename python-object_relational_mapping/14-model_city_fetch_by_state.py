@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """
-Script that prints the State object with the name passed as argument
-from the database
-Using module SQLAlchemy
+Script that prints all City objects from the database
 """
-
+from model_city import City
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -20,10 +18,8 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    s_tate = session.query(State).filter(State.name == argv[4]).first()
-
-    if s_tate:
-        print("{}".format(s_tate.id))
-    else:
-        print("Not found")
+    city = session.query(State, City).join(City).order_by(City.id)
+    for state, city in city:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
+    # Close session
     session.close()
