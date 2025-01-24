@@ -1,5 +1,5 @@
 #!/usr/bin/node
 function add (a, b) {
     console.log(a + b);
-}
-add(parsetInt(ProcessingInstruction.argv[2]), parseInt(ProcessingInstruction.argv[3]));
+  }
+  add(parseInt(process.argv[2]), parseInt(process.argv[3]));
