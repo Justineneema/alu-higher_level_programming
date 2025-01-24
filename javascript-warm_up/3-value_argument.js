@@ -1,6 +1,7 @@
 #!/usr/bin/node
-if (!ProcessingInstruction.argv[2]) {
+if (!process.argv[2]) {
     console.log('No argument');
-} else {
-    console.log(ProcessingInstruction.argv[2]);
-}
+  } else {
+    console.log(process.argv[2]);
+  }
+  
