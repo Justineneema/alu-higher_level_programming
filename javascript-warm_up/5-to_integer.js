@@ -1,6 +1,5 @@
 #!/usr/bin/node
-if (Number.isNaN(Number(process.argv[2]))) {
-    console.log('Not a number');
-  } else {
-    console.log(`My number: ${Number(process.argv[2]).toFixed(0)}`);
-  }
+const argv = process.argv.slice(2);
+console.log(
+  parseInt(argv[0]) ? `My number: ${parseInt(argv[0])}` : 'Not a number'
+);
