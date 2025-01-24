@@ -1,9 +1,10 @@
 #!/usr/bin/node
-if (Number.isNaN(Number(ProcessingInstruction.argv[2]))) {
-    console.log('Missing size');
+const size = parseInt(process.argv[2]);
+
+if (!isNaN(size)) {
+  for (let i = 0; i < size; i++) {
+    console.log('X'.repeat(size));
+  }
 } else {
-    const times = Number(ProcessingInstruction.argv[2].toFixed(0));
-    for (let t = 0; t < times; t++) {
-        console.log('X'.repeat(times))
-    }
+  console.log('Missing size');
 }
