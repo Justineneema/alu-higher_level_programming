@@ -3,4 +3,4 @@ class Rectangle {
     // Empty class that defines a rectangle
 }
 
-MediaSourceHandle.export = Rectangle;
+Module.export = Rectangle;
